@@ -1,0 +1,912 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Super Magic Toilet Cleaner - 10X Lebih Efektif</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            overflow-x: hidden;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #8B4C52 0%, #A95963 100%);
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -10%;
+            width: 500px;
+            height: 500px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+        }
+        
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: -30%;
+            left: -5%;
+            width: 400px;
+            height: 400px;
+            background: rgba(255, 255, 255, 0.08);
+            border-radius: 50%;
+        }
+        
+        .hero-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .badge {
+            background: #FF4757;
+            color: white;
+            padding: 8px 20px;
+            border-radius: 25px;
+            display: inline-block;
+            font-weight: bold;
+            margin-bottom: 20px;
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+        
+        h1 {
+            font-size: 3.5em;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            line-height: 1.2;
+        }
+        
+        .subtitle {
+            font-size: 1.5em;
+            margin-bottom: 30px;
+            opacity: 0.95;
+        }
+        
+        .cta-button {
+            background: #FF4757;
+            color: white;
+            padding: 18px 45px;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.3em;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-decoration: none;
+            display: inline-block;
+            box-shadow: 0 8px 20px rgba(255, 71, 87, 0.4);
+        }
+        
+        .cta-button:hover {
+            background: #E63946;
+            transform: translateY(-3px);
+            box-shadow: 0 12px 25px rgba(255, 71, 87, 0.5);
+        }
+        
+        /* Features Section */
+        .features {
+            padding: 80px 20px;
+            background: #F8F9FA;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: 2.5em;
+            margin-bottom: 50px;
+            color: #8B4C52;
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+        
+        .feature-card {
+            background: white;
+            padding: 35px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+        }
+        
+        .feature-icon {
+            font-size: 3.5em;
+            margin-bottom: 20px;
+        }
+        
+        .feature-card h3 {
+            color: #8B4C52;
+            margin-bottom: 15px;
+            font-size: 1.4em;
+        }
+        
+        /* Benefits Section */
+        .benefits {
+            padding: 80px 20px;
+            background: linear-gradient(135deg, #FFC1CC 0%, #FFE0E5 100%);
+        }
+        
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+        }
+        
+        .benefit-item {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            border-left: 5px solid #FF4757;
+            box-shadow: 0 3px 15px rgba(0,0,0,0.1);
+        }
+        
+        .benefit-item h4 {
+            color: #8B4C52;
+            margin-bottom: 10px;
+            font-size: 1.2em;
+        }
+        
+        /* How to Use */
+        .how-to-use {
+            padding: 80px 20px;
+            background: white;
+        }
+        
+        .steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+        
+        .step {
+            text-align: center;
+            position: relative;
+        }
+        
+        .step-number {
+            background: linear-gradient(135deg, #8B4C52, #A95963);
+            color: white;
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2em;
+            font-weight: bold;
+            margin: 0 auto 20px;
+            box-shadow: 0 5px 15px rgba(139, 76, 82, 0.3);
+        }
+        
+        .step h4 {
+            color: #8B4C52;
+            margin-bottom: 10px;
+            font-size: 1.2em;
+        }
+        
+        /* Warning Section */
+        .warning {
+            background: #FFF9E6;
+            border: 3px solid #FFD700;
+            border-radius: 15px;
+            padding: 30px;
+            margin: 60px auto;
+            max-width: 900px;
+            text-align: center;
+        }
+        
+        .warning-icon {
+            font-size: 3em;
+            margin-bottom: 15px;
+        }
+        
+        .warning h3 {
+            color: #D32F2F;
+            font-size: 1.8em;
+            margin-bottom: 10px;
+        }
+        
+        .warning p {
+            font-size: 1.2em;
+            color: #555;
+        }
+        
+        /* Testimonials */
+        .testimonials {
+            padding: 80px 20px;
+            background: #F8F9FA;
+        }
+        
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .testimonial {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+        
+        .testimonial-stars {
+            color: #FFD700;
+            font-size: 1.5em;
+            margin-bottom: 15px;
+        }
+        
+        .testimonial-text {
+            font-style: italic;
+            color: #555;
+            margin-bottom: 15px;
+            line-height: 1.8;
+        }
+        
+        .testimonial-author {
+            font-weight: bold;
+            color: #8B4C52;
+        }
+        
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, #8B4C52 0%, #A95963 100%);
+            padding: 80px 20px;
+            text-align: center;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"><path fill="%23ffffff" fill-opacity="0.05" d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z"></path></svg>') repeat-x;
+            background-size: 1200px 120px;
+            animation: wave 15s linear infinite;
+        }
+        
+        @keyframes wave {
+            0% { background-position: 0 0; }
+            100% { background-position: 1200px 0; }
+        }
+        
+        .cta-section h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+        
+        .cta-section p {
+            font-size: 1.3em;
+            margin-bottom: 30px;
+            opacity: 0.95;
+        }
+        
+        .flash-badge {
+            background: linear-gradient(45deg, #FF4757, #FF6348);
+            color: white;
+            padding: 15px 30px;
+            border-radius: 50px;
+            display: inline-block;
+            font-weight: bold;
+            font-size: 1.2em;
+            margin-bottom: 20px;
+            animation: pulse 2s infinite;
+            box-shadow: 0 5px 25px rgba(255, 71, 87, 0.5);
+        }
+        
+        .countdown-timer {
+            background: rgba(0,0,0,0.3);
+            padding: 30px;
+            border-radius: 15px;
+            margin: 30px auto;
+            max-width: 600px;
+            backdrop-filter: blur(10px);
+        }
+        
+        .countdown-timer h3 {
+            font-size: 1.5em;
+            margin-bottom: 20px;
+            color: #FFD700;
+        }
+        
+        .timer-display {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        
+        .timer-box {
+            background: rgba(255,255,255,0.15);
+            padding: 20px;
+            border-radius: 12px;
+            min-width: 90px;
+            backdrop-filter: blur(5px);
+            border: 2px solid rgba(255,255,255,0.2);
+        }
+        
+        .timer-number {
+            font-size: 2.5em;
+            font-weight: bold;
+            display: block;
+            color: #FFD700;
+        }
+        
+        .timer-label {
+            font-size: 0.9em;
+            opacity: 0.9;
+            text-transform: uppercase;
+        }
+        
+        .stock-alert {
+            background: rgba(255, 71, 87, 0.2);
+            border: 2px solid #FF4757;
+            padding: 20px;
+            border-radius: 12px;
+            margin: 20px auto;
+            max-width: 500px;
+            animation: pulse 3s infinite;
+        }
+        
+        .stock-alert strong {
+            color: #FFD700;
+            font-size: 1.3em;
+        }
+        
+        .bonus-list {
+            background: rgba(255,255,255,0.1);
+            padding: 25px;
+            border-radius: 15px;
+            margin: 30px auto;
+            max-width: 600px;
+            text-align: left;
+            backdrop-filter: blur(10px);
+        }
+        
+        .bonus-list h4 {
+            text-align: center;
+            font-size: 1.5em;
+            margin-bottom: 20px;
+            color: #FFD700;
+        }
+        
+        .bonus-item {
+            padding: 12px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.2);
+            font-size: 1.1em;
+        }
+        
+        .bonus-item:last-child {
+            border-bottom: none;
+        }
+        
+        .social-proof {
+            background: rgba(0,0,0,0.2);
+            padding: 15px 25px;
+            border-radius: 50px;
+            display: inline-block;
+            margin: 20px 0;
+            font-size: 1.1em;
+        }
+        
+        .social-proof::before {
+            content: "🔥";
+            margin-right: 8px;
+        }
+        
+        .price {
+            font-size: 4.5em;
+            font-weight: 900;
+            margin: 30px 0;
+            text-shadow: 4px 4px 8px rgba(0,0,0,0.5);
+            color: #FFEB3B;
+            animation: priceGlow 2s ease-in-out infinite;
+            position: relative;
+            display: inline-block;
+            background: linear-gradient(135deg, #FFEB3B 0%, #FFF176 50%, #FFEB3B 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            filter: drop-shadow(0 0 15px rgba(255, 235, 59, 0.8));
+        }
+        
+        @keyframes priceGlow {
+            0%, 100% {
+                filter: drop-shadow(0 0 15px rgba(255, 235, 59, 0.8));
+                transform: scale(1);
+            }
+            50% {
+                filter: drop-shadow(0 0 30px rgba(255, 235, 59, 1));
+                transform: scale(1.05);
+            }
+        }
+        
+        .price::before {
+            content: '💰';
+            position: absolute;
+            left: -60px;
+            font-size: 0.6em;
+            animation: bounce 1s infinite;
+            filter: none;
+            -webkit-text-fill-color: initial;
+        }
+        
+        .price::after {
+            content: '💰';
+            position: absolute;
+            right: -60px;
+            font-size: 0.6em;
+            animation: bounce 1s infinite;
+            animation-delay: 0.5s;
+            filter: none;
+            -webkit-text-fill-color: initial;
+        }
+        
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        
+        .price-note {
+            font-size: 1.1em;
+            opacity: 0.9;
+            margin-bottom: 30px;
+        }
+        
+        /* Footer */
+        footer {
+            background: #2C3E50;
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+        }
+        
+        .footer-contact {
+            margin-bottom: 20px;
+        }
+        
+        .footer-contact a {
+            color: #FF4757;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+        
+        /* Floating WhatsApp Button */
+        .whatsapp-float {
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            bottom: 30px;
+            right: 30px;
+            background-color: #25D366;
+            color: white;
+            border-radius: 50%;
+            text-align: center;
+            font-size: 35px;
+            box-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+            z-index: 100;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-decoration: none;
+        }
+        
+        .whatsapp-float:hover {
+            background-color: #128C7E;
+            transform: scale(1.1);
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.2em;
+            }
+            
+            .subtitle {
+                font-size: 1.2em;
+            }
+            
+            .section-title {
+                font-size: 2em;
+            }
+            
+            .price {
+                font-size: 2.2em;
+            }
+            
+            .price::before,
+            .price::after {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="badge">🏆 BEST SELLER</div>
+            <h1>SUPER MAGIC<br>TOILET CLEANER</h1>
+            <p class="subtitle">10X Lebih Efektif Membersihkan Kerak & Noda Membandel</p>
+            <p style="font-size: 1.2em; margin-bottom: 30px;">Formula baru yang mampu mengangkat kerak dan noda membandel hanya dalam hitungan menit!</p>
+            
+            <!-- Product Image in Hero -->
+            <!-- 🔴 GANTI GAMBAR 1: FOTO PRODUK UTAMA (Botol 1 Liter Pink) -->
+            <div style="margin: 40px 0;">
+                <img src="Galeri/8.png" alt="Super Magic Toilet Cleaner 1 Liter" style="max-width: 450px; width: 100%; height: auto; filter: drop-shadow(0 10px 30px rgba(0,0,0,0.3));">
+            </div>
+            
+            <!-- Video Demo Section -->
+            <!-- 🔴 GANTI VIDEO: Upload video demo produk Anda, lalu paste link di src="..." -->
+            <div style="margin: 50px auto; max-width: 800px;">
+                <h3 style="font-size: 2em; margin-bottom: 25px; text-shadow: 2px 2px 4px rgba(0,0,0,0.3);">
+                    🎥 LIHAT HASILNYA SENDIRI!
+                </h3>
+                <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 20px; box-shadow: 0 15px 50px rgba(0,0,0,0.4); border: 5px solid rgba(255,255,255,0.3);">
+                    <video 
+                        controls 
+                        autoplay 
+                        muted 
+                        loop 
+                        playsinline
+                        style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;"
+                        poster="Galeri/video-thumbnail.jpg">
+                        <source src="Galeri/VID 3.mp4" type="video/mp4">
+                        Browser Anda tidak mendukung video HTML5.
+                    </video>
+                </div>
+                <p style="margin-top: 20px; font-size: 1.2em; opacity: 0.95;">
+                    ⚡ Kerak hilang dalam hitungan DETIK! Bukan MENIT!
+                </p>
+            </div>
+            
+            <a href="#order" class="cta-button">🛒 PESAN SEKARANG</a>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <h2 class="section-title">Kenapa Pilih Super Magic Cleaner?</h2>
+            
+            <!-- Feature Images Grid -->
+            <!-- 🔴 GANTI GAMBAR 2: FOTO KENAPA PILIH SUPER MAGIC CLEANER -->
+            <div style="text-align: center; margin-bottom: 50px;">
+                <img src="Galeri/1.png" alt="Kenapa Pilih Super Magic Cleaner" style="max-width: 900px; width: 100%; height: auto; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.1);">
+            </div>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">⚡</div>
+                    <h3>10X Lebih Efektif</h3>
+                    <p>Membersihkan kerak & noda membandel dengan cepat dan maksimal</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">💰</div>
+                    <h3>Lebih Hemat</h3>
+                    <p>Cukup sedikit cairan sudah bisa membersihkan satu kamar mandi</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">✨</div>
+                    <h3>Lebih Aman</h3>
+                    <p>Dilengkapi sarung tangan gratis & aroma tidak menyengat</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="benefits">
+        <div class="container">
+            <h2 class="section-title">Kegunaan Super Magic Cleaner</h2>
+            
+            <div class="benefits-grid">
+                <div class="benefit-item">
+                    <h4>✓ Menghilangkan Kerak & Lumut</h4>
+                    <p>Membersihkan kerak dan lumut membandel hingga ke sela terkecil</p>
+                </div>
+                <div class="benefit-item">
+                    <h4>✓ Membersihkan Segala Permukaan</h4>
+                    <p>Aman untuk keramik, porselen, dan wastafel</p>
+                </div>
+                <div class="benefit-item">
+                    <h4>✓ Tidak Merusak Nat</h4>
+                    <p>Formula khusus yang tidak merusak nat keramik</p>
+                </div>
+                <div class="benefit-item">
+                    <h4>✓ Tidak Berbau Menyengat</h4>
+                    <p>Wangi segar tanpa bau menyengat yang mengganggu</p>
+                </div>
+                <div class="benefit-item">
+                    <h4>✓ Mudah Digunakan</h4>
+                    <p>Cukup tuang, diamkan, sikat, dan bilas!</p>
+                </div>
+                <div class="benefit-item">
+                    <h4>✓ Ekonomis 1 Liter</h4>
+                    <p>Kemasan 1 liter bisa dipakai hingga 1 bulan</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How to Use Section -->
+    <section class="how-to-use">
+        <div class="container">
+            <h2 class="section-title">Cara Penggunaan</h2>
+            
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h4>Tuangkan</h4>
+                    <p>Tuangkan toilet cleaner ke wadah yang akan dibersihkan</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h4>Diamkan</h4>
+                    <p>Oleskan secara merata dan diamkan 5-7 menit</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h4>Sikat</h4>
+                    <p>Kemudian sikat sampai bersih dan bilas dengan air</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <h4>Bilas</h4>
+                    <p>Ulangi dengan cara yang sama bila perlu untuk hasil maksimal</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Warning Section -->
+    <section class="warning">
+        <div class="warning-icon">⚠️</div>
+        <h3>TIDAK COCOK UNTUK KACA DAN SEJENISNYA!</h3>
+        <p>Produk ini khusus untuk keramik, toilet, dan permukaan kamar mandi. Jangan digunakan pada kaca, marmer, granit, atau logam.</p>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <div class="container">
+            <h2 class="section-title">Apa Kata Pelanggan Kami?</h2>
+            <div class="testimonial-grid">
+                <div class="testimonial">
+                    <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+                    <p class="testimonial-text">"Kerak toilet yang sudah bertahun-tahun langsung hilang! Gak nyangka seefektif ini. Puas banget!"</p>
+                    <p class="testimonial-author">- Ibu Siti, Jakarta</p>
+                </div>
+                <div class="testimonial">
+                    <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+                    <p class="testimonial-text">"Lebih hemat dan efektif dibanding produk lain. 1 liter bisa buat sebulan lebih. Recommended!"</p>
+                    <p class="testimonial-author">- Bapak Andi, Bandung</p>
+                </div>
+                <div class="testimonial">
+                    <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+                    <p class="testimonial-text">"Kamar mandi jadi bersih seperti baru. Wanginya juga enak, tidak menyengat seperti produk lain."</p>
+                    <p class="testimonial-author">- Ibu Dewi, Surabaya</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section" id="order">
+        <div class="container">
+            <div class="flash-badge">⚡ FLASH SALE HARI INI SAJA! ⚡</div>
+            
+            <h2>PROMO TERBATAS!</h2>
+            <p>Jangan Sampai Kehabisan! Penawaran Spesial Berakhir Dalam:</p>
+            
+            <!-- Countdown Timer -->
+            <div class="countdown-timer">
+                <h3>⏰ WAKTU PROMO TERSISA:</h3>
+                <div class="timer-display">
+                    <div class="timer-box">
+                        <span class="timer-number" id="hours">00</span>
+                        <span class="timer-label">Jam</span>
+                    </div>
+                    <div class="timer-box">
+                        <span class="timer-number" id="minutes">00</span>
+                        <span class="timer-label">Menit</span>
+                    </div>
+                    <div class="timer-box">
+                        <span class="timer-number" id="seconds">00</span>
+                        <span class="timer-label">Detik</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Stock Alert -->
+            <div class="stock-alert">
+                ⚠️ <strong>SISA STOK: 10 BOTOL!</strong><br>
+                Stock terbatas! Sudah <strong>153 orang</strong> membeli hari ini!
+            </div>
+            
+            <!-- Social Proof -->
+            <div class="social-proof">
+                👥 12 orang sedang melihat produk ini sekarang
+            </div>
+            
+            <!-- Promo Product Image -->
+            <!-- 🔴 GANTI GAMBAR 5: FOTO SPECIAL PENAWARAN/PROMO -->
+            <div style="margin: 30px 0;">
+                <img src="Galeri/3.png" alt="Promo Super Magic Cleaner dengan Bonus" style="max-width: 600px; width: 100%; height: auto; border-radius: 20px; box-shadow: 0 15px 50px rgba(0,0,0,0.3);">
+            </div>
+            
+            <div style="font-size: 1.3em; font-weight: bold; color: #00E5FF; text-transform: uppercase; margin-top: 30px;">
+                💥 Hanya
+            </div>
+            <div class="price" style="
+                background: linear-gradient(135deg, #00E5FF 0%, #18FFFF 40%, #FFFFFF 90%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-clip: text;
+                filter: drop-shadow(0 0 45px rgba(0, 229, 255, 1));
+                animation: priceGlow 1.5s ease-in-out infinite;
+            ">
+                Rp 33.000
+            </div>
+            
+            <p style="text-decoration: line-through; opacity: 0.7; font-size: 1.4em; margin-bottom: 5px; color: #ffffff;">Harga Normal: Rp 70.000</p>
+            
+            <!-- COD Badge -->
+            <div style="background: linear-gradient(135deg, #00E676, #00C853); padding: 12px 35px; border-radius: 50px; display: inline-block; margin: 15px 0; box-shadow: 0 8px 25px rgba(0,230,118,0.5); animation: pulse 2s infinite; border: 3px solid rgba(255,255,255,0.3);">
+                <p style="font-size: 1.5em; font-weight: bold; margin: 0; color: white; text-shadow: 2px 2px 4px rgba(0,0,0,0.3);">
+                    ✅ BISA COD (Bayar di Tempat)
+                </p>
+                <p style="font-size: 1em; margin: 5px 0 0 0; color: white; opacity: 0.95;">
+                    💰 Cek Barang Dulu, Baru Bayar!
+                </p>
+            </div>
+            
+            <div style="background: linear-gradient(135deg, #FF4757, #FF6348); padding: 15px 30px; border-radius: 50px; display: inline-block; margin: 20px 0; box-shadow: 0 8px 25px rgba(255,71,87,0.4);">
+                <p style="font-size: 1.8em; font-weight: bold; margin: 0; color: white;">
+                    🎉 HEMAT Rp 37.000 🎉
+                </p>
+                <p style="font-size: 1.3em; margin: 5px 0 0 0; color: white;">
+                    DISKON 53% OFF!
+                </p>
+            </div>
+            
+            <!-- Bonus List -->
+            <div class="bonus-list">
+                <h4>🎁 BONUS SPESIAL HARI INI:</h4>
+                <div class="bonus-item">✅ 1 Botol Super Magic Cleaner 1 Liter</div>
+                <div class="bonus-item">✅ GRATIS Sarung Tangan Premium</div>
+                <div class="bonus-item">✅ GRATIS Panduan Cara Penggunaan Lengkap</div>
+                <div class="bonus-item">✅ Garansi 100% Uang Kembali Jika Tidak Puas</div>
+                <div class="bonus-item">✅ Konsultasi GRATIS via WhatsApp</div>
+            </div>
+            
+            <div style="background: rgba(255,235,59,0.15); border: 3px solid #FFEB3B; padding: 25px; border-radius: 20px; margin: 30px auto; max-width: 600px;">
+                <p style="font-size: 1.8em; font-weight: bold; color: #FFEB3B; margin: 0 0 10px 0; text-shadow: 2px 2px 4px rgba(0,0,0,0.5);">
+                    🔥 PROMO SPESIAL BUNDLE! 🔥
+                </p>
+                <p style="font-size: 2.5em; font-weight: 900; color: #FFEB3B; margin: 10px 0; text-shadow: 3px 3px 6px rgba(0,0,0,0.5);">
+                    BELI 2 = Rp 57.000
+                </p>
+                <p style="font-size: 1.2em; color: white; margin: 0 0 20px 0;">
+                    (Hemat Rp 9.000 dari harga normal!)
+                </p>
+                
+                <!-- 🔴 GANTI GAMBAR 6: FOTO PAKET BUNDLE (2 BOTOL) -->
+                <div style="margin-top: 20px;">
+                    <img src="Galeri/9 (1).png" alt="Paket Bundle 2 Botol Super Magic Cleaner" style="max-width: 100%; width: 100%; height: auto; border-radius: 15px; box-shadow: 0 8px 30px rgba(0,0,0,0.3); border: 3px solid #FFEB3B;">
+                </div>
+            </div>
+            
+            <p style="font-size: 1.1em; margin: 20px 0; color: white; opacity: 0.9;">
+                💡 <strong>Bisa beli 1 botol atau langsung 2 botol dengan harga spesial!</strong>
+            </p>
+            
+            <!-- 🔴 GANTI NOMOR WHATSAPP: Ubah "62XXXXXXXXXXX" dengan nomor WA Anda -->
+            <!-- Format: 628123456789 (62 = kode Indonesia, tanpa +, tanpa 0 di depan) -->
+            <a href="https://wa.me/6283877526949?text=Halo,%20saya%20mau%20pesan%20Super%20Magic%20Toilet%20Cleaner%20sebelum%20promo%20habis!" class="cta-button" style="animation: pulse 2s infinite;">
+                🛒 PESAN SEKARANG SEBELUM KEHABISAN!
+            </a>
+            
+            <p style="margin-top: 20px; font-size: 0.95em; opacity: 0.8;">
+                ⚡ Proses cepat via WhatsApp - Respon dalam 5 menit!
+            </p>
+        </div>
+    </section>
+
+    <script>
+        // Countdown Timer
+        function startCountdown(duration) {
+            let timer = duration;
+            const hoursDisplay = document.getElementById('hours');
+            const minutesDisplay = document.getElementById('minutes');
+            const secondsDisplay = document.getElementById('seconds');
+            
+            setInterval(function() {
+                const hours = Math.floor(timer / 3600);
+                const minutes = Math.floor((timer % 3600) / 60);
+                const seconds = timer % 60;
+                
+                hoursDisplay.textContent = hours < 10 ? '0' + hours : hours;
+                minutesDisplay.textContent = minutes < 10 ? '0' + minutes : minutes;
+                secondsDisplay.textContent = seconds < 10 ? '0' + seconds : seconds;
+                
+                if (--timer < 0) {
+                    timer = duration; // Reset timer
+                }
+            }, 1000);
+        }
+        
+        // Set countdown untuk 24 jam (86400 detik)
+        // 🔴 GANTI WAKTU: Ubah angka di bawah untuk mengatur countdown
+        // 3600 = 1 jam, 7200 = 2 jam, 86400 = 24 jam
+        window.addEventListener('load', function() {
+            startCountdown(86400); // 24 jam
+        });
+    </script>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-contact">
+                <p>Hubungi Kami:</p>
+                <!-- 🔴 GANTI NOMOR WHATSAPP DI FOOTER: Ubah "62XXXXXXXXXXX" dan "08XX-XXXX-XXXX" -->
+                <a href="https://wa.me/6283877526949">📱 WhatsApp: 0838-7752-6949</a>
+            </div>
+            <p style="margin-top: 20px; opacity: 0.8;">© 2024 Super Magic Toilet Cleaner. All Rights Reserved.</p>
+            <p style="margin-top: 10px; opacity: 0.7;">Produk pembersih toilet profesional untuk rumah tangga modern</p>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <!-- 🔴 GANTI NOMOR WHATSAPP TOMBOL FLOATING: Ubah "62XXXXXXXXXXX" -->
+    <a href="https://wa.me/6283877526949?text=Halo,%20saya%20mau%20pesan%20Super%20Magic%20Toilet%20Cleaner" class="whatsapp-float" target="_blank">
+        <span style="line-height: 60px;">💬</span>
+    </a>
+</body>
+</html>
