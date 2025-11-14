@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Super Magic Toilet Cleaner - 10X Lebih Efektif</title>
+    <title>Super Magic Toilet Cleaner - 10X Lebih Efektif | Promo Spesial</title>
+    <meta name="description" content="Super Magic Toilet Cleaner membersihkan kerak toilet 10X lebih efektif. Promo Rp 33.000 hari ini saja!">
     <style>
         * {
             margin: 0;
@@ -18,11 +19,64 @@
             overflow-x: hidden;
         }
         
+        /* Top Sticky WhatsApp Bar */
+        .top-wa-bar {
+            background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+            padding: 15px 20px;
+            position: sticky;
+            top: 0;
+            z-index: 999;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            animation: slideDown 0.5s ease-out;
+        }
+        
+        @keyframes slideDown {
+            from { transform: translateY(-100%); }
+            to { transform: translateY(0); }
+        }
+        
+        .top-wa-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        
+        .top-wa-text {
+            font-size: 1.1em;
+            font-weight: bold;
+            color: white;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+        }
+        
+        .top-wa-button {
+            background: white;
+            color: #25D366;
+            padding: 12px 30px;
+            border-radius: 50px;
+            font-weight: bold;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            font-size: 1.1em;
+        }
+        
+        .top-wa-button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+        }
+        
         /* Hero Section */
         .hero {
             background: linear-gradient(135deg, #8B4C52 0%, #A95963 100%);
             color: white;
-            padding: 80px 20px;
+            padding: 60px 20px 80px;
             text-align: center;
             position: relative;
             overflow: hidden;
@@ -37,6 +91,7 @@
             height: 500px;
             background: rgba(255, 255, 255, 0.1);
             border-radius: 50%;
+            animation: float 8s ease-in-out infinite;
         }
         
         .hero::after {
@@ -48,6 +103,12 @@
             height: 400px;
             background: rgba(255, 255, 255, 0.08);
             border-radius: 50%;
+            animation: float 10s ease-in-out infinite reverse;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0) translateX(0); }
+            50% { transform: translateY(-30px) translateX(20px); }
         }
         
         .hero-content {
@@ -58,14 +119,17 @@
         }
         
         .badge {
-            background: #FF4757;
+            background: linear-gradient(135deg, #FF4757, #FF6348);
             color: white;
-            padding: 8px 20px;
+            padding: 10px 25px;
             border-radius: 25px;
             display: inline-block;
             font-weight: bold;
             margin-bottom: 20px;
             animation: pulse 2s infinite;
+            font-size: 1.1em;
+            border: 2px solid rgba(255,255,255,0.3);
+            box-shadow: 0 5px 20px rgba(255,71,87,0.4);
         }
         
         @keyframes pulse {
@@ -73,38 +137,130 @@
             50% { transform: scale(1.05); }
         }
         
+        .headline-impact {
+            background: linear-gradient(135deg, #FFD700, #FFA500);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-size: 2em;
+            display: block;
+            margin-bottom: 15px;
+            font-weight: 900;
+            text-shadow: none;
+            filter: drop-shadow(0 0 20px rgba(255, 215, 0, 0.8));
+            letter-spacing: 2px;
+        }
+        
         h1 {
-            font-size: 3.5em;
-            margin-bottom: 20px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-            line-height: 1.2;
+            font-size: 4em;
+            margin-bottom: 15px;
+            text-shadow: 3px 3px 6px rgba(0,0,0,0.5);
+            line-height: 1.1;
+            font-weight: 900;
+            letter-spacing: -1px;
         }
         
         .subtitle {
-            font-size: 1.5em;
-            margin-bottom: 30px;
+            font-size: 1.8em;
+            margin-bottom: 20px;
             opacity: 0.95;
+            font-weight: 700;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.4);
+        }
+        
+        .price-hero {
+            background: linear-gradient(135deg, #FF4757, #FF6348);
+            padding: 25px 45px;
+            border-radius: 20px;
+            display: inline-block;
+            margin: 25px 0;
+            box-shadow: 0 10px 30px rgba(255,71,87,0.5);
+            border: 3px solid rgba(255,255,255,0.3);
+            animation: priceGlow 2s ease-in-out infinite;
+        }
+        
+        @keyframes priceGlow {
+            0%, 100% { box-shadow: 0 10px 30px rgba(255,71,87,0.5); }
+            50% { box-shadow: 0 15px 40px rgba(255,71,87,0.8); }
+        }
+        
+        .price-hero-text {
+            font-size: 1.3em;
+            margin: 0 0 5px 0;
+            text-decoration: line-through;
+            opacity: 0.8;
+        }
+        
+        .price-hero-main {
+            font-size: 3.8em;
+            font-weight: 900;
+            margin: 0;
+            color: #FFEB3B;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            line-height: 1;
+        }
+        
+        .price-hero-badge {
+            font-size: 1.2em;
+            margin: 10px 0 0 0;
+            color: #FFD700;
+            font-weight: bold;
         }
         
         .cta-button {
-            background: #FF4757;
+            background: linear-gradient(135deg, #FF4757 0%, #FF6348 100%);
             color: white;
-            padding: 18px 45px;
+            padding: 22px 55px;
             border: none;
             border-radius: 50px;
-            font-size: 1.3em;
-            font-weight: bold;
+            font-size: 1.4em;
+            font-weight: 900;
             cursor: pointer;
             transition: all 0.3s;
             text-decoration: none;
             display: inline-block;
-            box-shadow: 0 8px 20px rgba(255, 71, 87, 0.4);
+            box-shadow: 0 10px 30px rgba(255, 71, 87, 0.5);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            border: 3px solid rgba(255,255,255,0.3);
+            animation: buttonPulse 2s infinite;
+        }
+        
+        @keyframes buttonPulse {
+            0%, 100% { 
+                transform: scale(1);
+                box-shadow: 0 10px 30px rgba(255, 71, 87, 0.5);
+            }
+            50% { 
+                transform: scale(1.05);
+                box-shadow: 0 15px 40px rgba(255, 71, 87, 0.7);
+            }
         }
         
         .cta-button:hover {
-            background: #E63946;
-            transform: translateY(-3px);
-            box-shadow: 0 12px 25px rgba(255, 71, 87, 0.5);
+            background: linear-gradient(135deg, #E63946 0%, #FF4757 100%);
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 15px 40px rgba(255, 71, 87, 0.7);
+        }
+        
+        .cta-button-large {
+            font-size: 1.6em;
+            padding: 25px 65px;
+        }
+        
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: 2.8em;
+            margin-bottom: 50px;
+            color: #8B4C52;
+            font-weight: 900;
         }
         
         /* Features Section */
@@ -113,48 +269,45 @@
             background: #F8F9FA;
         }
         
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        
-        .section-title {
-            text-align: center;
-            font-size: 2.5em;
-            margin-bottom: 50px;
-            color: #8B4C52;
-        }
-        
         .features-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 30px;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 35px;
             margin-bottom: 40px;
         }
         
         .feature-card {
             background: white;
-            padding: 35px;
-            border-radius: 15px;
+            padding: 40px;
+            border-radius: 20px;
             text-align: center;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            box-shadow: 0 8px 30px rgba(0,0,0,0.1);
             transition: transform 0.3s, box-shadow 0.3s;
+            border: 2px solid transparent;
         }
         
         .feature-card:hover {
             transform: translateY(-10px);
-            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+            border-color: #FF4757;
         }
         
         .feature-icon {
-            font-size: 3.5em;
+            font-size: 4em;
             margin-bottom: 20px;
         }
         
         .feature-card h3 {
             color: #8B4C52;
             margin-bottom: 15px;
-            font-size: 1.4em;
+            font-size: 1.5em;
+            font-weight: 700;
+        }
+        
+        .feature-card p {
+            color: #666;
+            font-size: 1.1em;
+            line-height: 1.7;
         }
         
         /* Benefits Section */
@@ -163,90 +316,91 @@
             background: linear-gradient(135deg, #FFC1CC 0%, #FFE0E5 100%);
         }
         
-        .benefits-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 25px;
-        }
-        
-        .benefit-item {
-            background: white;
-            padding: 25px;
-            border-radius: 12px;
-            border-left: 5px solid #FF4757;
-            box-shadow: 0 3px 15px rgba(0,0,0,0.1);
-        }
-        
-        .benefit-item h4 {
-            color: #8B4C52;
-            margin-bottom: 10px;
-            font-size: 1.2em;
-        }
-        
-        /* How to Use */
-        .how-to-use {
-            padding: 80px 20px;
-            background: white;
-        }
-        
-        .steps {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 30px;
-            margin-top: 50px;
-        }
-        
-        .step {
-            text-align: center;
-            position: relative;
-        }
-        
-        .step-number {
-            background: linear-gradient(135deg, #8B4C52, #A95963);
-            color: white;
-            width: 70px;
-            height: 70px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 2em;
-            font-weight: bold;
-            margin: 0 auto 20px;
-            box-shadow: 0 5px 15px rgba(139, 76, 82, 0.3);
-        }
-        
-        .step h4 {
-            color: #8B4C52;
-            margin-bottom: 10px;
-            font-size: 1.2em;
-        }
-        
-        /* Warning Section */
-        .warning {
-            background: #FFF9E6;
-            border: 3px solid #FFD700;
-            border-radius: 15px;
-            padding: 30px;
-            margin: 60px auto;
+        .benefits-list {
             max-width: 900px;
-            text-align: center;
+            margin: 40px auto;
+            background: white;
+            padding: 50px;
+            border-radius: 25px;
+            box-shadow: 0 15px 50px rgba(0,0,0,0.15);
         }
         
-        .warning-icon {
-            font-size: 3em;
-            margin-bottom: 15px;
-        }
-        
-        .warning h3 {
-            color: #D32F2F;
-            font-size: 1.8em;
-            margin-bottom: 10px;
-        }
-        
-        .warning p {
+        .benefit-bullet {
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+            padding: 25px 0;
+            border-bottom: 2px solid #FFE0E5;
             font-size: 1.2em;
-            color: #555;
+        }
+        
+        .benefit-bullet:last-child {
+            border-bottom: none;
+        }
+        
+        .benefit-icon-large {
+            font-size: 2.5em;
+            flex-shrink: 0;
+        }
+        
+        .benefit-text {
+            flex: 1;
+        }
+        
+        .benefit-text strong {
+            color: #8B4C52;
+            display: block;
+            margin-bottom: 8px;
+            font-size: 1.2em;
+            font-weight: 700;
+        }
+        
+        .benefit-text p {
+            color: #666;
+            margin: 0;
+            line-height: 1.6;
+        }
+        
+        /* Middle CTA Section */
+        .mid-cta-section {
+            background: linear-gradient(135deg, #FF6348 0%, #FF4757 100%);
+            padding: 70px 20px;
+            margin: 0;
+            text-align: center;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .mid-cta-section::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -10%;
+            width: 600px;
+            height: 600px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        .mid-cta-content {
+            max-width: 900px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .urgency-text {
+            background: rgba(0,0,0,0.3);
+            padding: 15px 35px;
+            border-radius: 50px;
+            display: inline-block;
+            font-size: 1.4em;
+            font-weight: bold;
+            margin-bottom: 25px;
+            animation: pulse 2s infinite;
+            border: 2px solid rgba(255,255,255,0.3);
         }
         
         /* Testimonials */
@@ -257,34 +411,36 @@
         
         .testimonial-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 35px;
             margin-top: 40px;
         }
         
         .testimonial {
             background: white;
-            padding: 30px;
-            border-radius: 15px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            padding: 35px;
+            border-radius: 20px;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        
+        .testimonial:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 40px rgba(0,0,0,0.15);
         }
         
         .testimonial-stars {
             color: #FFD700;
-            font-size: 1.5em;
+            font-size: 1.6em;
             margin-bottom: 15px;
         }
         
         .testimonial-text {
             font-style: italic;
             color: #555;
-            margin-bottom: 15px;
+            margin-bottom: 20px;
             line-height: 1.8;
-        }
-        
-        .testimonial-author {
-            font-weight: bold;
-            color: #8B4C52;
+            font-size: 1.05em;
         }
         
         /* CTA Section */
@@ -314,110 +470,104 @@
             100% { background-position: 1200px 0; }
         }
         
-        .cta-section h2 {
-            font-size: 2.5em;
-            margin-bottom: 20px;
-        }
-        
-        .cta-section p {
-            font-size: 1.3em;
-            margin-bottom: 30px;
-            opacity: 0.95;
-        }
-        
         .flash-badge {
             background: linear-gradient(45deg, #FF4757, #FF6348);
             color: white;
-            padding: 15px 30px;
+            padding: 15px 35px;
             border-radius: 50px;
             display: inline-block;
             font-weight: bold;
-            font-size: 1.2em;
-            margin-bottom: 20px;
+            font-size: 1.3em;
+            margin-bottom: 25px;
             animation: pulse 2s infinite;
-            box-shadow: 0 5px 25px rgba(255, 71, 87, 0.5);
+            box-shadow: 0 8px 30px rgba(255, 71, 87, 0.5);
+            border: 3px solid rgba(255,255,255,0.3);
         }
         
         .countdown-timer {
             background: rgba(0,0,0,0.3);
-            padding: 30px;
-            border-radius: 15px;
-            margin: 30px auto;
-            max-width: 600px;
+            padding: 35px;
+            border-radius: 20px;
+            margin: 35px auto;
+            max-width: 650px;
             backdrop-filter: blur(10px);
+            border: 2px solid rgba(255,255,255,0.2);
         }
         
         .countdown-timer h3 {
-            font-size: 1.5em;
-            margin-bottom: 20px;
+            font-size: 1.6em;
+            margin-bottom: 25px;
             color: #FFD700;
         }
         
         .timer-display {
             display: flex;
             justify-content: center;
-            gap: 20px;
+            gap: 25px;
             flex-wrap: wrap;
         }
         
         .timer-box {
             background: rgba(255,255,255,0.15);
-            padding: 20px;
-            border-radius: 12px;
-            min-width: 90px;
+            padding: 25px;
+            border-radius: 15px;
+            min-width: 100px;
             backdrop-filter: blur(5px);
             border: 2px solid rgba(255,255,255,0.2);
         }
         
         .timer-number {
-            font-size: 2.5em;
+            font-size: 3em;
             font-weight: bold;
             display: block;
             color: #FFD700;
+            line-height: 1;
         }
         
         .timer-label {
-            font-size: 0.9em;
+            font-size: 1em;
             opacity: 0.9;
             text-transform: uppercase;
+            margin-top: 5px;
         }
         
         .stock-alert {
             background: rgba(255, 71, 87, 0.2);
-            border: 2px solid #FF4757;
-            padding: 20px;
-            border-radius: 12px;
-            margin: 20px auto;
-            max-width: 500px;
+            border: 3px solid #FF4757;
+            padding: 25px;
+            border-radius: 15px;
+            margin: 25px auto;
+            max-width: 600px;
             animation: pulse 3s infinite;
         }
         
         .stock-alert strong {
             color: #FFD700;
-            font-size: 1.3em;
+            font-size: 1.4em;
         }
         
         .bonus-list {
             background: rgba(255,255,255,0.1);
-            padding: 25px;
-            border-radius: 15px;
-            margin: 30px auto;
-            max-width: 600px;
+            padding: 35px;
+            border-radius: 20px;
+            margin: 35px auto;
+            max-width: 700px;
             text-align: left;
             backdrop-filter: blur(10px);
+            border: 2px solid rgba(255,255,255,0.2);
         }
         
         .bonus-list h4 {
             text-align: center;
-            font-size: 1.5em;
-            margin-bottom: 20px;
+            font-size: 1.6em;
+            margin-bottom: 25px;
             color: #FFD700;
         }
         
         .bonus-item {
-            padding: 12px 0;
+            padding: 15px 0;
             border-bottom: 1px solid rgba(255,255,255,0.2);
-            font-size: 1.1em;
+            font-size: 1.15em;
         }
         
         .bonus-item:last-child {
@@ -426,170 +576,336 @@
         
         .social-proof {
             background: rgba(0,0,0,0.2);
-            padding: 15px 25px;
+            padding: 15px 30px;
             border-radius: 50px;
             display: inline-block;
-            margin: 20px 0;
-            font-size: 1.1em;
+            margin: 25px 0;
+            font-size: 1.15em;
         }
         
         .social-proof::before {
             content: "🔥";
-            margin-right: 8px;
+            margin-right: 10px;
         }
         
-        .price {
-            font-size: 4.5em;
-            font-weight: 900;
-            margin: 30px 0;
-            text-shadow: 4px 4px 8px rgba(0,0,0,0.5);
-            color: #FFEB3B;
-            animation: priceGlow 2s ease-in-out infinite;
-            position: relative;
-            display: inline-block;
-            background: linear-gradient(135deg, #FFEB3B 0%, #FFF176 50%, #FFEB3B 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            filter: drop-shadow(0 0 15px rgba(255, 235, 59, 0.8));
+        .guarantee-badge {
+            background: linear-gradient(135deg, #FFD700, #FFA500);
+            padding: 40px;
+            border-radius: 25px;
+            margin: 50px auto;
+            max-width: 900px;
+            box-shadow: 0 15px 50px rgba(255, 215, 0, 0.3);
+            border: 3px solid rgba(255,255,255,0.5);
         }
         
-        @keyframes priceGlow {
-            0%, 100% {
-                filter: drop-shadow(0 0 15px rgba(255, 235, 59, 0.8));
-                transform: scale(1);
-            }
-            50% {
-                filter: drop-shadow(0 0 30px rgba(255, 235, 59, 1));
-                transform: scale(1.05);
-            }
-        }
-        
-        .price::before {
-            content: '💰';
-            position: absolute;
-            left: -60px;
-            font-size: 0.6em;
-            animation: bounce 1s infinite;
-            filter: none;
-            -webkit-text-fill-color: initial;
-        }
-        
-        .price::after {
-            content: '💰';
-            position: absolute;
-            right: -60px;
-            font-size: 0.6em;
-            animation: bounce 1s infinite;
-            animation-delay: 0.5s;
-            filter: none;
-            -webkit-text-fill-color: initial;
-        }
-        
-        @keyframes bounce {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-10px); }
-        }
-        
-        .price-note {
-            font-size: 1.1em;
-            opacity: 0.9;
+        .guarantee-badge h3 {
+            font-size: 2.2em;
+            color: #8B4C52;
             margin-bottom: 30px;
+            font-weight: 900;
+        }
+        
+        .guarantee-items {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 25px;
+            margin-top: 25px;
+        }
+        
+        .guarantee-item {
+            background: white;
+            padding: 30px;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+            transition: transform 0.3s;
+        }
+        
+        .guarantee-item:hover {
+            transform: translateY(-5px);
+        }
+        
+        .guarantee-item-icon {
+            font-size: 3.5em;
+            margin-bottom: 15px;
+        }
+        
+        .guarantee-item-text {
+            font-weight: bold;
+            color: #8B4C52;
+            font-size: 1.15em;
+            line-height: 1.5;
+        }
+        
+        /* Warning Section */
+        .warning {
+            background: #FFF9E6;
+            border: 3px solid #FFD700;
+            border-radius: 20px;
+            padding: 40px;
+            margin: 70px auto;
+            max-width: 950px;
+            text-align: center;
+        }
+        
+        .warning-icon {
+            font-size: 3.5em;
+            margin-bottom: 20px;
+        }
+        
+        .warning h3 {
+            color: #D32F2F;
+            font-size: 2em;
+            margin-bottom: 15px;
+            font-weight: 900;
+        }
+        
+        .warning p {
+            font-size: 1.25em;
+            color: #555;
+            line-height: 1.7;
         }
         
         /* Footer */
         footer {
             background: #2C3E50;
             color: white;
-            padding: 40px 20px;
+            padding: 50px 20px;
             text-align: center;
         }
         
         .footer-contact {
-            margin-bottom: 20px;
+            margin-bottom: 25px;
         }
         
         .footer-contact a {
             color: #FF4757;
             text-decoration: none;
             font-weight: bold;
-            font-size: 1.2em;
+            font-size: 1.3em;
+            transition: color 0.3s;
+        }
+        
+        .footer-contact a:hover {
+            color: #FF6348;
         }
         
         /* Floating WhatsApp Button */
         .whatsapp-float {
             position: fixed;
-            width: 60px;
-            height: 60px;
+            width: 75px;
+            height: 75px;
             bottom: 30px;
             right: 30px;
-            background-color: #25D366;
+            background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
             color: white;
             border-radius: 50%;
             text-align: center;
-            font-size: 35px;
-            box-shadow: 2px 2px 10px rgba(0,0,0,0.3);
-            z-index: 100;
+            font-size: 42px;
+            box-shadow: 0 10px 35px rgba(37, 211, 102, 0.6);
+            z-index: 1000;
             display: flex;
             align-items: center;
             justify-content: center;
             cursor: pointer;
             transition: all 0.3s;
             text-decoration: none;
+            animation: floatBounce 2s ease-in-out infinite;
+            border: 3px solid rgba(255,255,255,0.3);
+        }
+        
+        @keyframes floatBounce {
+            0%, 100% { transform: translateY(0) scale(1); }
+            50% { transform: translateY(-12px) scale(1.1); }
         }
         
         .whatsapp-float:hover {
-            background-color: #128C7E;
-            transform: scale(1.1);
+            background: linear-gradient(135deg, #128C7E 0%, #075E54 100%);
+            transform: scale(1.2);
+            box-shadow: 0 15px 45px rgba(37, 211, 102, 0.8);
+        }
+        
+        .whatsapp-float::after {
+            content: '3';
+            position: absolute;
+            top: -5px;
+            right: -5px;
+            background: #FF4757;
+            color: white;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            font-size: 15px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 3px solid white;
+            animation: pulse 2s infinite;
         }
         
         /* Responsive */
         @media (max-width: 768px) {
             h1 {
-                font-size: 2.2em;
+                font-size: 2.5em;
+            }
+            
+            .headline-impact {
+                font-size: 1.3em;
             }
             
             .subtitle {
-                font-size: 1.2em;
+                font-size: 1.4em;
             }
             
             .section-title {
-                font-size: 2em;
-            }
-            
-            .price {
                 font-size: 2.2em;
             }
             
-            .price::before,
-            .price::after {
-                display: none;
+            .price-hero-main {
+                font-size: 2.8em;
+            }
+            
+            .cta-button {
+                padding: 18px 35px;
+                font-size: 1.15em;
+            }
+            
+            .cta-button-large {
+                padding: 20px 40px;
+                font-size: 1.3em;
+            }
+            
+            .top-wa-content {
+                flex-direction: column;
+                gap: 10px;
+            }
+            
+            .top-wa-text {
+                font-size: 0.95em;
+                text-align: center;
+            }
+            
+            .whatsapp-float {
+                width: 65px;
+                height: 65px;
+                bottom: 20px;
+                right: 20px;
+                font-size: 36px;
+            }
+            
+            .whatsapp-float::after {
+                width: 26px;
+                height: 26px;
+                font-size: 13px;
+            }
+            
+            .benefit-bullet {
+                font-size: 1.05em;
+            }
+            
+            .benefits-list {
+                padding: 30px;
+            }
+            
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .testimonial-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .guarantee-items {
+                grid-template-columns: 1fr;
+            }
+            
+            .timer-display {
+                gap: 15px;
+            }
+            
+            .timer-box {
+                min-width: 80px;
+                padding: 20px;
+            }
+            
+            .timer-number {
+                font-size: 2.2em;
             }
         }
     </style>
 </head>
 <body>
+    <!-- Top Sticky WhatsApp Bar -->
+    <div class="top-wa-bar">
+        <div class="top-wa-content">
+            <span class="top-wa-text">🔥 CHAT WHATSAPP SEKARANG – Sisa 10 Botol!</span>
+            <a href="https://wa.me/6283877526949?text=Halo,%20saya%20mau%20pesan%20Super%20Magic%20Toilet%20Cleaner%20sebelum%20promo%20habis!" class="top-wa-button">
+                💬 CHAT SEKARANG
+            </a>
+        </div>
+    </div>
+
     <!-- Hero Section -->
     <section class="hero">
         <div class="hero-content">
-            <div class="badge">🏆 BEST SELLER</div>
-            <h1>SUPER MAGIC<br>TOILET CLEANER</h1>
-            <p class="subtitle">10X Lebih Efektif Membersihkan Kerak & Noda Membandel</p>
-            <p style="font-size: 1.2em; margin-bottom: 30px;">Formula baru yang mampu mengangkat kerak dan noda membandel hanya dalam hitungan menit!</p>
+            <div class="badge">🏆 BEST SELLER #1</div>
+            
+            <!-- Powerful Headline -->
+            <span class="headline-impact">🔥 KERAK SUSAH HILANG? 🔥</span>
+            <h1>SUPER MAGIC TOILET<br>10X LEBIH KUAT!</h1>
+            <p class="subtitle">Hilangkan Kerak & Lumut Membandel dalam Hitungan MENIT!</p>
+            
+            <!-- Price in Hero -->
+            <div class="price-hero">
+                <p class="price-hero-text">Harga Normal: Rp 70.000</p>
+                <p class="price-hero-main">Rp 33.000</p>
+                <p class="price-hero-badge">⚡ HARGA PROMO HARI INI SAJA! ⚡</p>
+            </div>
+            
+            <p style="font-size: 1.3em; margin: 20px 0; font-weight: bold;">
+                Formula baru yang mampu mengangkat kerak dan noda membandel hanya dalam hitungan menit!
+            </p>
             
             <!-- Product Image in Hero -->
-            <!-- 🔴 GANTI GAMBAR 1: FOTO PRODUK UTAMA (Botol 1 Liter Pink) -->
             <div style="margin: 40px 0;">
                 <img src="Galeri/8.png" alt="Super Magic Toilet Cleaner 1 Liter" style="max-width: 450px; width: 100%; height: auto; filter: drop-shadow(0 10px 30px rgba(0,0,0,0.3));">
             </div>
             
+            <!-- Before After Comparison -->
+            <div style="background: rgba(0,0,0,0.3); padding: 35px; border-radius: 25px; margin: 40px auto; max-width: 950px; backdrop-filter: blur(10px); border: 2px solid rgba(255,255,255,0.2);">
+                <h3 style="font-size: 2.2em; margin-bottom: 25px; color: #FFD700; font-weight: 900;">
+                    ✨ BUKTI NYATA: BEFORE & AFTER ✨
+                </h3>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px;">
+                    <!-- Before Image -->
+                    <div style="text-align: center;">
+                        <div style="background: white; padding: 12px; border-radius: 20px; box-shadow: 0 8px 25px rgba(0,0,0,0.3);">
+                            <img src="Galeri/before.jpg" alt="Toilet Kotor Sebelum" style="width: 100%; height: 280px; object-fit: cover; border-radius: 12px;">
+                            <p style="margin: 20px 0 8px; font-weight: bold; color: #FF4757; font-size: 1.4em;">SEBELUM ❌</p>
+                            <p style="margin: 0; color: #666; font-size: 1em;">Kerak tebal & kotor</p>
+                        </div>
+                    </div>
+                    <!-- After Image -->
+                    <div style="text-align: center;">
+                        <div style="background: white; padding: 12px; border-radius: 20px; box-shadow: 0 8px 25px rgba(0,0,0,0.3);">
+                            <img src="Galeri/after.jpg" alt="Toilet Bersih Sesudah" style="width: 100%; height: 280px; object-fit: cover; border-radius: 12px;">
+                            <p style="margin: 20px 0 8px; font-weight: bold; color: #25D366; font-size: 1.4em;">SESUDAH ✅</p>
+                            <p style="margin: 0; color: #666; font-size: 1em;">Putih bersih mengkilap!</p>
+                        </div>
+                    </div>
+                </div>
+                <p style="margin-top: 25px; font-size: 1.3em; color: #FFEB3B; font-weight: bold;">
+                    ⏱️ Hasil hanya dalam 2 MENIT pemakaian!
+                </p>
+            </div>
+            
             <!-- Video Demo Section -->
-            <!-- 🔴 GANTI VIDEO: Upload video demo produk Anda, lalu paste link di src="..." -->
-            <div style="margin: 50px auto; max-width: 800px;">
-                <h3 style="font-size: 2em; margin-bottom: 25px; text-shadow: 2px 2px 4px rgba(0,0,0,0.3);">
+            <div style="margin: 50px auto; max-width: 850px;">
+                <h3 style="font-size: 2.2em; margin-bottom: 30px; text-shadow: 2px 2px 4px rgba(0,0,0,0.3); font-weight: 900;">
                     🎥 LIHAT HASILNYA SENDIRI!
                 </h3>
-                <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 20px; box-shadow: 0 15px 50px rgba(0,0,0,0.4); border: 5px solid rgba(255,255,255,0.3);">
+                <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 25px; box-shadow: 0 15px 50px rgba(0,0,0,0.4); border: 5px solid rgba(255,255,255,0.3);">
                     <video 
                         controls 
                         autoplay 
@@ -602,12 +918,23 @@
                         Browser Anda tidak mendukung video HTML5.
                     </video>
                 </div>
-                <p style="margin-top: 20px; font-size: 1.2em; opacity: 0.95;">
+                <p style="margin-top: 25px; font-size: 1.3em; opacity: 0.95; font-weight: bold;">
                     ⚡ Kerak hilang dalam hitungan DETIK! Bukan MENIT!
                 </p>
             </div>
             
-            <a href="#order" class="cta-button">🛒 PESAN SEKARANG</a>
+            <a href="https://wa.me/6283877526949?text=Halo,%20saya%20mau%20pesan%20Super%20Magic%20Toilet%20Cleaner%20sebelum%20promo%20habis!" class="cta-button cta-button-large" style="margin-top: 35px;">
+                🛒 PESAN SEKARANG - SISA 10 BOTOL!
+            </a>
+            
+            <div style="margin-top: 25px;">
+                <p style="font-size: 1.2em; opacity: 0.95; font-weight: bold;">
+                    🚨 <strong>PROMO BERAKHIR MALAM INI</strong> 🚨
+                </p>
+                <p style="font-size: 1.05em; opacity: 0.9;">
+                    ⏳ Diskon otomatis hilang jika stok habis
+                </p>
+            </div>
         </div>
     </section>
 
@@ -617,26 +944,25 @@
             <h2 class="section-title">Kenapa Pilih Super Magic Cleaner?</h2>
             
             <!-- Feature Images Grid -->
-            <!-- 🔴 GANTI GAMBAR 2: FOTO KENAPA PILIH SUPER MAGIC CLEANER -->
-            <div style="text-align: center; margin-bottom: 50px;">
-                <img src="Galeri/1.png" alt="Kenapa Pilih Super Magic Cleaner" style="max-width: 900px; width: 100%; height: auto; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.1);">
+            <div style="text-align: center; margin-bottom: 60px;">
+                <img src="Galeri/1.png" alt="Kenapa Pilih Super Magic Cleaner" style="max-width: 950px; width: 100%; height: auto; border-radius: 20px; box-shadow: 0 10px 40px rgba(0,0,0,0.15);">
             </div>
             
             <div class="features-grid">
                 <div class="feature-card">
                     <div class="feature-icon">⚡</div>
                     <h3>10X Lebih Efektif</h3>
-                    <p>Membersihkan kerak & noda membandel dengan cepat dan maksimal</p>
+                    <p>Membersihkan kerak & noda membandel dengan cepat dan maksimal. Terbukti lebih kuat dari produk sejenis!</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">💰</div>
                     <h3>Lebih Hemat</h3>
-                    <p>Cukup sedikit cairan sudah bisa membersihkan satu kamar mandi</p>
+                    <p>Cukup sedikit cairan sudah bisa membersihkan satu kamar mandi. 1 botol bisa dipakai 1 bulan lebih!</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">✨</div>
                     <h3>Lebih Aman</h3>
-                    <p>Dilengkapi sarung tangan gratis & aroma tidak menyengat</p>
+                    <p>Dilengkapi sarung tangan gratis & aroma tidak menyengat. Formula aman untuk keluarga Anda!</p>
                 </div>
             </div>
         </div>
@@ -645,62 +971,117 @@
     <!-- Benefits Section -->
     <section class="benefits">
         <div class="container">
-            <h2 class="section-title">Kegunaan Super Magic Cleaner</h2>
+            <h2 class="section-title">Manfaat Super Magic Cleaner</h2>
             
-            <div class="benefits-grid">
-                <div class="benefit-item">
-                    <h4>✓ Menghilangkan Kerak & Lumut</h4>
-                    <p>Membersihkan kerak dan lumut membandel hingga ke sela terkecil</p>
+            <div class="benefits-list">
+                <div class="benefit-bullet">
+                    <span class="benefit-icon-large">✅</span>
+                    <div class="benefit-text">
+                        <strong>Menghilangkan kerak membandel</strong>
+                        <p>Kerak bertahun-tahun hilang dalam hitungan menit</p>
+                    </div>
                 </div>
-                <div class="benefit-item">
-                    <h4>✓ Membersihkan Segala Permukaan</h4>
-                    <p>Aman untuk keramik, porselen, dan wastafel</p>
+                
+                <div class="benefit-bullet">
+                    <span class="benefit-icon-large">✅</span>
+                    <div class="benefit-text">
+                        <strong>Membersihkan lumut tebal</strong>
+                        <p>Lumut hitam dan hijau hilang sempurna tanpa bekas</p>
+                    </div>
                 </div>
-                <div class="benefit-item">
-                    <h4>✓ Tidak Merusak Nat</h4>
-                    <p>Formula khusus yang tidak merusak nat keramik</p>
+                
+                <div class="benefit-bullet">
+                    <span class="benefit-icon-large">✅</span>
+                    <div class="benefit-text">
+                        <strong>Menghilangkan bau tidak sedap</strong>
+                        <p>Toilet wangi segar sepanjang hari tanpa bau kimia</p>
+                    </div>
                 </div>
-                <div class="benefit-item">
-                    <h4>✓ Tidak Berbau Menyengat</h4>
-                    <p>Wangi segar tanpa bau menyengat yang mengganggu</p>
+                
+                <div class="benefit-bullet">
+                    <span class="benefit-icon-large">✅</span>
+                    <div class="benefit-text">
+                        <strong>Tidak merusak nat</strong>
+                        <p>Aman untuk semua jenis nat keramik, tidak membuat nat rapuh</p>
+                    </div>
                 </div>
-                <div class="benefit-item">
-                    <h4>✓ Mudah Digunakan</h4>
-                    <p>Cukup tuang, diamkan, sikat, dan bilas!</p>
+                
+                <div class="benefit-bullet">
+                    <span class="benefit-icon-large">✅</span>
+                    <div class="benefit-text">
+                        <strong>Aman untuk keramik & porselen</strong>
+                        <p>Formula khusus yang tidak merusak permukaan toilet Anda</p>
+                    </div>
                 </div>
-                <div class="benefit-item">
-                    <h4>✓ Ekonomis 1 Liter</h4>
-                    <p>Kemasan 1 liter bisa dipakai hingga 1 bulan</p>
+                
+                <div class="benefit-bullet">
+                    <span class="benefit-icon-large">✅</span>
+                    <div class="benefit-text">
+                        <strong>10X lebih efektif dibanding pembersih biasa</strong>
+                        <p>Terbukti menghilangkan noda paling membandel sekalipun</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- Middle CTA Section -->
+    <section class="mid-cta-section">
+        <div class="mid-cta-content">
+            <div class="urgency-text">
+                🚨 PROMO BERAKHIR MALAM INI 🚨
+            </div>
+            <h2 style="font-size: 2.8em; margin-bottom: 20px; font-weight: 900;">
+                Jangan Lewatkan Kesempatan Ini!
+            </h2>
+            <p style="font-size: 1.5em; margin-bottom: 35px;">
+                🔥 Sisa stok hanya <strong>10 botol</strong><br>
+                ⏳ Sudah <strong>153 orang</strong> membeli hari ini!
+            </p>
+            <a href="https://wa.me/6283877526949?text=Halo,%20saya%20mau%20pesan%20Super%20Magic%20Toilet%20Cleaner%20sebelum%20promo%20habis!" class="cta-button cta-button-large">
+                💬 CHAT WHATSAPP SEKARANG!
+            </a>
+        </div>
+    </section>
+
     <!-- How to Use Section -->
-    <section class="how-to-use">
+    <section style="padding: 80px 20px; background: white;">
         <div class="container">
-            <h2 class="section-title">Cara Penggunaan</h2>
+            <h2 class="section-title">Cara Pakai (Mudah & Cepat!)</h2>
             
-            <div class="steps">
-                <div class="step">
-                    <div class="step-number">1</div>
-                    <h4>Tuangkan</h4>
-                    <p>Tuangkan toilet cleaner ke wadah yang akan dibersihkan</p>
-                </div>
-                <div class="step">
-                    <div class="step-number">2</div>
-                    <h4>Diamkan</h4>
-                    <p>Oleskan secara merata dan diamkan 5-7 menit</p>
-                </div>
-                <div class="step">
-                    <div class="step-number">3</div>
-                    <h4>Sikat</h4>
-                    <p>Kemudian sikat sampai bersih dan bilas dengan air</p>
-                </div>
-                <div class="step">
-                    <div class="step-number">4</div>
-                    <h4>Bilas</h4>
-                    <p>Ulangi dengan cara yang sama bila perlu untuk hasil maksimal</p>
+            <div style="max-width: 750px; margin: 0 auto; background: linear-gradient(135deg, #FFC1CC 0%, #FFE0E5 100%); padding: 45px; border-radius: 25px; box-shadow: 0 15px 50px rgba(0,0,0,0.15);">
+                <div style="text-align: left;">
+                    <div style="display: flex; align-items: start; gap: 25px; margin-bottom: 35px;">
+                        <div style="background: linear-gradient(135deg, #8B4C52, #A95963); color: white; width: 55px; height: 55px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 2em; font-weight: bold; flex-shrink: 0; box-shadow: 0 5px 15px rgba(139,76,82,0.4);">1</div>
+                        <div>
+                            <h4 style="color: #8B4C52; font-size: 1.5em; margin-bottom: 8px; font-weight: 700;">Tuang ke area yang ingin dibersihkan</h4>
+                            <p style="color: #666; font-size: 1.15em; margin: 0; line-height: 1.6;">Cukup sedikit cairan saja sudah efektif membersihkan</p>
+                        </div>
+                    </div>
+                    
+                    <div style="display: flex; align-items: start; gap: 25px; margin-bottom: 35px;">
+                        <div style="background: linear-gradient(135deg, #8B4C52, #A95963); color: white; width: 55px; height: 55px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 2em; font-weight: bold; flex-shrink: 0; box-shadow: 0 5px 15px rgba(139,76,82,0.4);">2</div>
+                        <div>
+                            <h4 style="color: #8B4C52; font-size: 1.5em; margin-bottom: 8px; font-weight: 700;">Diamkan 5 menit</h4>
+                            <p style="color: #666; font-size: 1.15em; margin: 0; line-height: 1.6;">Biarkan formula bekerja maksimal membersihkan kerak</p>
+                        </div>
+                    </div>
+                    
+                    <div style="display: flex; align-items: start; gap: 25px; margin-bottom: 35px;">
+                        <div style="background: linear-gradient(135deg, #8B4C52, #A95963); color: white; width: 55px; height: 55px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 2em; font-weight: bold; flex-shrink: 0; box-shadow: 0 5px 15px rgba(139,76,82,0.4);">3</div>
+                        <div>
+                            <h4 style="color: #8B4C52; font-size: 1.5em; margin-bottom: 8px; font-weight: 700;">Sikat & bilas dengan air</h4>
+                            <p style="color: #666; font-size: 1.15em; margin: 0; line-height: 1.6;">Kerak langsung rontok dengan mudah tanpa perlu menggosok keras</p>
+                        </div>
+                    </div>
+                    
+                    <div style="display: flex; align-items: start; gap: 25px;">
+                        <div style="background: linear-gradient(135deg, #8B4C52, #A95963); color: white; width: 55px; height: 55px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 2em; font-weight: bold; flex-shrink: 0; box-shadow: 0 5px 15px rgba(139,76,82,0.4);">4</div>
+                        <div>
+                            <h4 style="color: #8B4C52; font-size: 1.5em; margin-bottom: 8px; font-weight: 700;">Ulangi jika kerak sangat tebal</h4>
+                            <p style="color: #666; font-size: 1.15em; margin: 0; line-height: 1.6;">Untuk hasil maksimal pada kerak bertahun-tahun</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -713,25 +1094,72 @@
         <p>Produk ini khusus untuk keramik, toilet, dan permukaan kamar mandi. Jangan digunakan pada kaca, marmer, granit, atau logam.</p>
     </section>
 
+    <!-- Guarantee Section -->
+    <section style="padding: 80px 20px; background: white;">
+        <div class="container">
+            <div class="guarantee-badge">
+                <h3>🛡️ JAMINAN KAMI UNTUK ANDA</h3>
+                <div class="guarantee-items">
+                    <div class="guarantee-item">
+                        <div class="guarantee-item-icon">💯</div>
+                        <p class="guarantee-item-text">Garansi uang kembali 100% jika tidak menghilangkan kerak</p>
+                    </div>
+                    <div class="guarantee-item">
+                        <div class="guarantee-item-icon">📦</div>
+                        <p class="guarantee-item-text">Bisa COD<br>(Bayar di tempat)</p>
+                    </div>
+                    <div class="guarantee-item">
+                        <div class="guarantee-item-icon">🚚</div>
+                        <p class="guarantee-item-text">Dikirim dari gudang terdekat</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Testimonials Section -->
     <section class="testimonials">
         <div class="container">
-            <h2 class="section-title">Apa Kata Pelanggan Kami?</h2>
+            <h2 class="section-title">💬 Apa Kata Pelanggan Kami?</h2>
+            <p style="text-align: center; font-size: 1.25em; color: #666; margin-bottom: 50px;">
+                Ribuan pelanggan puas dengan hasil Super Magic Cleaner!
+            </p>
+            
             <div class="testimonial-grid">
                 <div class="testimonial">
+                    <div style="display: flex; align-items: center; gap: 18px; margin-bottom: 18px;">
+                        <div style="width: 65px; height: 65px; background: linear-gradient(135deg, #8B4C52, #A95963); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 2em; color: white; box-shadow: 0 4px 15px rgba(139,76,82,0.3);">👩</div>
+                        <div>
+                            <p style="font-weight: bold; color: #8B4C52; margin: 0; font-size: 1.15em;">Ibu Siti</p>
+                            <p style="color: #999; margin: 0; font-size: 0.95em;">Jakarta</p>
+                        </div>
+                    </div>
                     <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
-                    <p class="testimonial-text">"Kerak toilet yang sudah bertahun-tahun langsung hilang! Gak nyangka seefektif ini. Puas banget!"</p>
-                    <p class="testimonial-author">- Ibu Siti, Jakarta</p>
+                    <p class="testimonial-text">"Kerak toilet yang sudah bertahun-tahun langsung hilang! Gak nyangka seefektif ini. Puas banget! Sekarang toilet saya kinclong seperti baru."</p>
                 </div>
+                
                 <div class="testimonial">
+                    <div style="display: flex; align-items: center; gap: 18px; margin-bottom: 18px;">
+                        <div style="width: 65px; height: 65px; background: linear-gradient(135deg, #8B4C52, #A95963); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 2em; color: white; box-shadow: 0 4px 15px rgba(139,76,82,0.3);">👨</div>
+                        <div>
+                            <p style="font-weight: bold; color: #8B4C52; margin: 0; font-size: 1.15em;">Bapak Andi</p>
+                            <p style="color: #999; margin: 0; font-size: 0.95em;">Bandung</p>
+                        </div>
+                    </div>
                     <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
-                    <p class="testimonial-text">"Lebih hemat dan efektif dibanding produk lain. 1 liter bisa buat sebulan lebih. Recommended!"</p>
-                    <p class="testimonial-author">- Bapak Andi, Bandung</p>
+                    <p class="testimonial-text">"Lebih hemat dan efektif dibanding produk lain. 1 liter bisa buat sebulan lebih. Recommended! Nggak nyesal beli 2 botol sekaligus."</p>
                 </div>
+                
                 <div class="testimonial">
+                    <div style="display: flex; align-items: center; gap: 18px; margin-bottom: 18px;">
+                        <div style="width: 65px; height: 65px; background: linear-gradient(135deg, #8B4C52, #A95963); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 2em; color: white; box-shadow: 0 4px 15px rgba(139,76,82,0.3);">👩</div>
+                        <div>
+                            <p style="font-weight: bold; color: #8B4C52; margin: 0; font-size: 1.15em;">Ibu Dewi</p>
+                            <p style="color: #999; margin: 0; font-size: 0.95em;">Surabaya</p>
+                        </div>
+                    </div>
                     <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
-                    <p class="testimonial-text">"Kamar mandi jadi bersih seperti baru. Wanginya juga enak, tidak menyengat seperti produk lain."</p>
-                    <p class="testimonial-author">- Ibu Dewi, Surabaya</p>
+                    <p class="testimonial-text">"Kamar mandi jadi bersih seperti baru. Wanginya juga enak, tidak menyengat seperti produk lain. Pelayanan penjualnya juga ramah!"</p>
                 </div>
             </div>
         </div>
@@ -742,8 +1170,8 @@
         <div class="container">
             <div class="flash-badge">⚡ FLASH SALE HARI INI SAJA! ⚡</div>
             
-            <h2>PROMO TERBATAS!</h2>
-            <p>Jangan Sampai Kehabisan! Penawaran Spesial Berakhir Dalam:</p>
+            <h2 style="font-size: 3em; margin-bottom: 20px; font-weight: 900;">PROMO TERBATAS!</h2>
+            <p style="font-size: 1.4em; margin-bottom: 30px;">Jangan Sampai Kehabisan! Penawaran Spesial Berakhir Dalam:</p>
             
             <!-- Countdown Timer -->
             <div class="countdown-timer">
@@ -776,42 +1204,59 @@
             </div>
             
             <!-- Promo Product Image -->
-            <!-- 🔴 GANTI GAMBAR 5: FOTO SPECIAL PENAWARAN/PROMO -->
-            <div style="margin: 30px 0;">
-                <img src="Galeri/3.png" alt="Promo Super Magic Cleaner dengan Bonus" style="max-width: 600px; width: 100%; height: auto; border-radius: 20px; box-shadow: 0 15px 50px rgba(0,0,0,0.3);">
+            <div style="margin: 35px 0;">
+                <img src="Galeri/3.png" alt="Promo Super Magic Cleaner dengan Bonus" style="max-width: 650px; width: 100%; height: auto; border-radius: 25px; box-shadow: 0 15px 50px rgba(0,0,0,0.3);">
             </div>
             
-            <div style="font-size: 1.3em; font-weight: bold; color: #00E5FF; text-transform: uppercase; margin-top: 30px;">
+            <div style="font-size: 1.4em; font-weight: bold; color: #00E5FF; text-transform: uppercase; margin-top: 35px;">
                 💥 Hanya
             </div>
-            <div class="price" style="
-                background: linear-gradient(135deg, #00E5FF 0%, #18FFFF 40%, #FFFFFF 90%);
-                -webkit-background-clip: text;
-                -webkit-text-fill-color: transparent;
-                background-clip: text;
-                filter: drop-shadow(0 0 45px rgba(0, 229, 255, 1));
-                animation: priceGlow 1.5s ease-in-out infinite;
-            ">
-                Rp 33.000
+            
+            <!-- Clearer Price Display -->
+            <div style="background: rgba(0,0,0,0.3); padding: 45px; border-radius: 25px; margin: 35px auto; max-width: 750px; backdrop-filter: blur(10px); border: 2px solid rgba(255,255,255,0.2);">
+                <p style="font-size: 1.6em; text-decoration: line-through; opacity: 0.7; margin: 0 0 15px 0; color: white;">
+                    Harga Normal: Rp 70.000
+                </p>
+                <div style="background: linear-gradient(135deg, #FFD700, #FFA500); padding: 30px; border-radius: 20px; margin: 25px 0; box-shadow: 0 12px 35px rgba(255, 215, 0, 0.5);">
+                    <p style="font-size: 1.4em; font-weight: bold; color: #8B4C52; margin: 0 0 8px 0;">
+                        🔥 HARGA PROMO:
+                    </p>
+                    <p style="font-size: 4.5em; font-weight: 900; color: #8B4C52; margin: 15px 0; line-height: 1;">
+                        Rp 33.000
+                    </p>
+                    <p style="font-size: 1.3em; font-weight: bold; color: #8B4C52; margin: 8px 0 0 0;">
+                        / botol (1 Liter)
+                    </p>
+                </div>
+                
+                <div style="background: linear-gradient(135deg, #FFEB3B, #FFC107); padding: 30px; border-radius: 20px; border: 3px dashed #8B4C52;">
+                    <p style="font-size: 1.6em; font-weight: bold; color: #8B4C52; margin: 0 0 12px 0;">
+                        🔥 BUNDLING:
+                    </p>
+                    <p style="font-size: 3.5em; font-weight: 900; color: #8B4C52; margin: 0; line-height: 1;">
+                        2 Botol = Rp 57.000
+                    </p>
+                    <p style="font-size: 1.3em; color: #8B4C52; margin: 12px 0 0 0; font-weight: bold;">
+                        (HEMAT Rp 9.000!)
+                    </p>
+                </div>
             </div>
             
-            <p style="text-decoration: line-through; opacity: 0.7; font-size: 1.4em; margin-bottom: 5px; color: #ffffff;">Harga Normal: Rp 70.000</p>
-            
             <!-- COD Badge -->
-            <div style="background: linear-gradient(135deg, #00E676, #00C853); padding: 12px 35px; border-radius: 50px; display: inline-block; margin: 15px 0; box-shadow: 0 8px 25px rgba(0,230,118,0.5); animation: pulse 2s infinite; border: 3px solid rgba(255,255,255,0.3);">
-                <p style="font-size: 1.5em; font-weight: bold; margin: 0; color: white; text-shadow: 2px 2px 4px rgba(0,0,0,0.3);">
+            <div style="background: linear-gradient(135deg, #00E676, #00C853); padding: 15px 40px; border-radius: 50px; display: inline-block; margin: 20px 0; box-shadow: 0 10px 30px rgba(0,230,118,0.5); animation: pulse 2s infinite; border: 3px solid rgba(255,255,255,0.3);">
+                <p style="font-size: 1.6em; font-weight: bold; margin: 0; color: white; text-shadow: 2px 2px 4px rgba(0,0,0,0.3);">
                     ✅ BISA COD (Bayar di Tempat)
                 </p>
-                <p style="font-size: 1em; margin: 5px 0 0 0; color: white; opacity: 0.95;">
+                <p style="font-size: 1.1em; margin: 8px 0 0 0; color: white; opacity: 0.95;">
                     💰 Cek Barang Dulu, Baru Bayar!
                 </p>
             </div>
             
-            <div style="background: linear-gradient(135deg, #FF4757, #FF6348); padding: 15px 30px; border-radius: 50px; display: inline-block; margin: 20px 0; box-shadow: 0 8px 25px rgba(255,71,87,0.4);">
-                <p style="font-size: 1.8em; font-weight: bold; margin: 0; color: white;">
+            <div style="background: linear-gradient(135deg, #FF4757, #FF6348); padding: 18px 35px; border-radius: 50px; display: inline-block; margin: 25px 0; box-shadow: 0 10px 30px rgba(255,71,87,0.5);">
+                <p style="font-size: 2em; font-weight: bold; margin: 0; color: white;">
                     🎉 HEMAT Rp 37.000 🎉
                 </p>
-                <p style="font-size: 1.3em; margin: 5px 0 0 0; color: white;">
+                <p style="font-size: 1.4em; margin: 8px 0 0 0; color: white;">
                     DISKON 53% OFF!
                 </p>
             </div>
@@ -826,35 +1271,24 @@
                 <div class="bonus-item">✅ Konsultasi GRATIS via WhatsApp</div>
             </div>
             
-            <div style="background: rgba(255,235,59,0.15); border: 3px solid #FFEB3B; padding: 25px; border-radius: 20px; margin: 30px auto; max-width: 600px;">
-                <p style="font-size: 1.8em; font-weight: bold; color: #FFEB3B; margin: 0 0 10px 0; text-shadow: 2px 2px 4px rgba(0,0,0,0.5);">
-                    🔥 PROMO SPESIAL BUNDLE! 🔥
+            <div style="background: rgba(255,71,87,0.2); border: 3px solid #FF4757; padding: 30px; border-radius: 20px; margin: 35px auto; max-width: 750px; animation: pulse 3s infinite;">
+                <p style="font-size: 2em; font-weight: bold; color: #FFD700; margin: 0 0 15px 0;">
+                    🚨 PROMO BERAKHIR MALAM INI 🚨
                 </p>
-                <p style="font-size: 2.5em; font-weight: 900; color: #FFEB3B; margin: 10px 0; text-shadow: 3px 3px 6px rgba(0,0,0,0.5);">
-                    BELI 2 = Rp 57.000
+                <p style="font-size: 1.4em; color: white; margin: 0 0 12px 0;">
+                    🔥 Sisa stok hanya <strong>10 botol</strong>
                 </p>
-                <p style="font-size: 1.2em; color: white; margin: 0 0 20px 0;">
-                    (Hemat Rp 9.000 dari harga normal!)
+                <p style="font-size: 1.2em; color: white; margin: 0;">
+                    ⏳ Diskon otomatis hilang jika stok habis
                 </p>
-                
-                <!-- 🔴 GANTI GAMBAR 6: FOTO PAKET BUNDLE (2 BOTOL) -->
-                <div style="margin-top: 20px;">
-                    <img src="Galeri/9 (1).png" alt="Paket Bundle 2 Botol Super Magic Cleaner" style="max-width: 100%; width: 100%; height: auto; border-radius: 15px; box-shadow: 0 8px 30px rgba(0,0,0,0.3); border: 3px solid #FFEB3B;">
-                </div>
             </div>
             
-            <p style="font-size: 1.1em; margin: 20px 0; color: white; opacity: 0.9;">
-                💡 <strong>Bisa beli 1 botol atau langsung 2 botol dengan harga spesial!</strong>
-            </p>
-            
-            <!-- 🔴 GANTI NOMOR WHATSAPP: Ubah "62XXXXXXXXXXX" dengan nomor WA Anda -->
-            <!-- Format: 628123456789 (62 = kode Indonesia, tanpa +, tanpa 0 di depan) -->
-            <a href="https://wa.me/6283877526949?text=Halo,%20saya%20mau%20pesan%20Super%20Magic%20Toilet%20Cleaner%20sebelum%20promo%20habis!" class="cta-button" style="animation: pulse 2s infinite;">
-                🛒 PESAN SEKARANG SEBELUM KEHABISAN!
+            <a href="https://wa.me/6283877526949?text=Halo,%20saya%20mau%20pesan%20Super%20Magic%20Toilet%20Cleaner%20sebelum%20promo%20habis!" class="cta-button cta-button-large" style="animation: buttonPulse 2s infinite; font-size: 1.8em; padding: 30px 70px;">
+                💬 CHAT WHATSAPP SEKARANG – SISA 10 BOTOL!
             </a>
             
-            <p style="margin-top: 20px; font-size: 0.95em; opacity: 0.8;">
-                ⚡ Proses cepat via WhatsApp - Respon dalam 5 menit!
+            <p style="margin-top: 30px; font-size: 1.15em; opacity: 0.9;">
+                ⚡ Respon cepat dalam 5 menit • Bisa COD • Garansi Uang Kembali
             </p>
         </div>
     </section>
@@ -883,8 +1317,6 @@
         }
         
         // Set countdown untuk 24 jam (86400 detik)
-        // 🔴 GANTI WAKTU: Ubah angka di bawah untuk mengatur countdown
-        // 3600 = 1 jam, 7200 = 2 jam, 86400 = 24 jam
         window.addEventListener('load', function() {
             startCountdown(86400); // 24 jam
         });
@@ -893,20 +1325,31 @@
     <!-- Footer -->
     <footer>
         <div class="container">
+            <!-- Final CTA Before Footer -->
+            <div style="background: linear-gradient(135deg, #25D366, #128C7E); padding: 50px; border-radius: 25px; margin-bottom: 50px; box-shadow: 0 15px 50px rgba(37, 211, 102, 0.4);">
+                <h3 style="font-size: 2.3em; margin-bottom: 20px; color: white; font-weight: 900;">
+                    💬 Masih Ragu? Chat Kami Sekarang!
+                </h3>
+                <p style="font-size: 1.3em; margin-bottom: 30px; color: white;">
+                    Tim kami siap menjawab semua pertanyaan Anda
+                </p>
+                <a href="https://wa.me/6283877526949?text=Halo,%20saya%20mau%20tanya%20tentang%20Super%20Magic%20Toilet%20Cleaner" style="background: white; color: #25D366; padding: 20px 50px; border-radius: 50px; font-weight: bold; text-decoration: none; display: inline-block; font-size: 1.4em; box-shadow: 0 8px 25px rgba(0,0,0,0.3); transition: all 0.3s;">
+                    📱 HUBUNGI KAMI VIA WHATSAPP
+                </a>
+            </div>
+            
             <div class="footer-contact">
-                <p>Hubungi Kami:</p>
-                <!-- 🔴 GANTI NOMOR WHATSAPP DI FOOTER: Ubah "62XXXXXXXXXXX" dan "08XX-XXXX-XXXX" -->
+                <p style="font-size: 1.2em;">Hubungi Kami:</p>
                 <a href="https://wa.me/6283877526949">📱 WhatsApp: 0838-7752-6949</a>
             </div>
-            <p style="margin-top: 20px; opacity: 0.8;">© 2024 Super Magic Toilet Cleaner. All Rights Reserved.</p>
-            <p style="margin-top: 10px; opacity: 0.7;">Produk pembersih toilet profesional untuk rumah tangga modern</p>
+            <p style="margin-top: 25px; opacity: 0.8; font-size: 1.05em;">© 2024 Super Magic Toilet Cleaner. All Rights Reserved.</p>
+            <p style="margin-top: 12px; opacity: 0.7;">Produk pembersih toilet profesional untuk rumah tangga modern</p>
         </div>
     </footer>
 
     <!-- Floating WhatsApp Button -->
-    <!-- 🔴 GANTI NOMOR WHATSAPP TOMBOL FLOATING: Ubah "62XXXXXXXXXXX" -->
-    <a href="https://wa.me/6283877526949?text=Halo,%20saya%20mau%20pesan%20Super%20Magic%20Toilet%20Cleaner" class="whatsapp-float" target="_blank">
-        <span style="line-height: 60px;">💬</span>
+    <a href="https://wa.me/6283877526949?text=Halo,%20saya%20mau%20pesan%20Super%20Magic%20Toilet%20Cleaner" class="whatsapp-float" target="_blank" title="Chat via WhatsApp">
+        <span style="line-height: 75px;">💬</span>
     </a>
 </body>
 </html>
