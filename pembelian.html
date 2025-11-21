@@ -159,15 +159,14 @@
       color: #111827;
     }
 
-.payment-detail img {
-  display: block;
-  margin: 12px auto 0;   /* auto = tengah kiri-kanan */
-  max-width: 350px;      /* dibesarkan dari 160px */
-  width: 80%;            /* responsif di layar kecil */
-  border-radius: 10px;
-  border: 1px solid #e5e7eb;
-}
-
+    .payment-detail img {
+      display: block;
+      margin: 12px auto 0;
+      max-width: 350px;
+      width: 80%;
+      border-radius: 10px;
+      border: 1px solid #e5e7eb;
+    }
 
     #uploadSection {
       margin-top: 10px;
@@ -350,6 +349,11 @@
     <div class="note">
       Dengan menekan tombol "Pesan Sekarang", Anda menyetujui pemesanan sesuai data yang diisi.
     </div>
+
+    <button type="submit" id="submitBtn">Pesan Sekarang</button>
+  </form>
+</div>
+
 <script>
   // ==== KONFIGURASI ====
   const WEB_APP_URL = "https://script.google.com/macros/s/AKfycbyjQBBLykZJ_iEZhlAQdR9VFLeBtyKxTfl2rZJ5WpLjsW35zRlpdPi-OK_ISHsuYeUS/exec";
@@ -507,5 +511,6 @@
     }
   });
 </script>
+
 </body>
 </html>
