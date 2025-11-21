@@ -350,14 +350,9 @@
     <div class="note">
       Dengan menekan tombol "Pesan Sekarang", Anda menyetujui pemesanan sesuai data yang diisi.
     </div>
-
-    <button type="submit" id="submitBtn">Pesan Sekarang</button>
-  </form>
-</div>
-
 <script>
   // ==== KONFIGURASI ====
-  const WEB_APP_URL = "https://script.google.com/macros/s/AKfycbyjQBBLykZJ_iEZhlAQdR9VFLeBtyKxTfl2rZJ5WpLjsW35zRlpdPi-OK_ISHsuYeUS/exec"; // <--- GANTI dengan URL Web App Google Script-mu
+  const WEB_APP_URL = "https://script.google.com/macros/s/AKfycbyjQBBLykZJ_iEZhlAQdR9VFLeBtyKxTfl2rZJ5WpLjsW35zRlpdPi-OK_ISHsuYeUS/exec";
   const COD_FEE = 3000;
 
   const variants = {
@@ -367,16 +362,16 @@
   };
 
   // ==== ELEMENT ====
-  const variantSelect = document.getElementById('variantSelect');
-  const basePriceEl   = document.getElementById('basePrice');
-  const totalPriceEl  = document.getElementById('totalPrice');
-  const paymentOptions = document.querySelectorAll('.payment-option');
+  const variantSelect   = document.getElementById('variantSelect');
+  const basePriceEl     = document.getElementById('basePrice');
+  const totalPriceEl    = document.getElementById('totalPrice');
+  const paymentOptions  = document.querySelectorAll('.payment-option');
 
-  const qrisDetail  = document.getElementById('qrisDetail');
-  const bankDetail  = document.getElementById('bankDetail');
-  const codDetail   = document.getElementById('codDetail');
-  const uploadSection = document.getElementById('uploadSection');
-  const submitBtn   = document.getElementById('submitBtn');
+  const qrisDetail      = document.getElementById('qrisDetail');
+  const bankDetail      = document.getElementById('bankDetail');
+  const codDetail       = document.getElementById('codDetail');
+  const uploadSection   = document.getElementById('uploadSection');
+  const submitBtn       = document.getElementById('submitBtn');
 
   let variantPrice = 0;
   let paymentMethod = null;
@@ -390,7 +385,7 @@
     if (paymentMethod === 'cod' && variantPrice > 0) {
       total += COD_FEE;
     }
-    basePriceEl.textContent = formatRupiah(variantPrice || 0);
+    basePriceEl.textContent  = formatRupiah(variantPrice || 0);
     totalPriceEl.textContent = formatRupiah(total || 0);
     return total;
   }
@@ -432,7 +427,7 @@
   });
 
   // Submit form
-document.getElementById('orderForm').addEventListener('submit', async (e) => {
+  document.getElementById('orderForm').addEventListener('submit', async (e) => {
     e.preventDefault();
 
     // Validasi varian & metode pembayaran
@@ -448,25 +443,17 @@ document.getElementById('orderForm').addEventListener('submit', async (e) => {
     // 🔒 VALIDASI UPLOAD BUKTI PEMBAYARAN
     const buktiFile = document.getElementById('bukti');
     if ((paymentMethod === 'qris' || paymentMethod === 'transfer') && buktiFile.files.length === 0) {
-        alert('Silakan upload bukti pembayaran terlebih dahulu.');
-        return;
+      alert('Silakan upload bukti pembayaran terlebih dahulu.');
+      return;
     }
 
-    const total = hitungTotal();
-
-    // ... kode lanjutannya tetap
-});
-
-
-    const total = hitungTotal();
-
+    const total  = hitungTotal();
     const nama   = document.getElementById('nama').value.trim();
     const alamat = document.getElementById('alamat').value.trim();
     const desa   = document.getElementById('desa').value.trim();
     const kec    = document.getElementById('kec').value.trim();
     const kota   = document.getElementById('kota').value.trim();
 
-    const varValue = variantSelect.value;
     const varText  = variantSelect.options[variantSelect.selectedIndex].text;
 
     const payload = {
@@ -479,32 +466,36 @@ document.getElementById('orderForm').addEventListener('submit', async (e) => {
       harga: variantPrice,
       metode_bayar: paymentMethod,
       total: total,
-      catatan_bukti: (paymentMethod === 'cod') ? 'COD (tanpa bukti transfer)' : 'Bukti pembayaran diserahkan terpisah'
+      catatan_bukti: (paymentMethod === 'cod')
+        ? 'COD (tanpa bukti transfer)'
+        : 'Bukti pembayaran diupload di form'
     };
 
     submitBtn.disabled = true;
     submitBtn.textContent = 'Memproses...';
 
     try {
-      const res = await fetch(WEB_APP_URL, {
+      await fetch(WEB_APP_URL, {
         method: 'POST',
-        mode: 'no-cors', // biar simple; Apps Script tetap menerima
+        mode: 'no-cors',
         headers: {
           'Content-Type': 'application/json'
         },
         body: JSON.stringify(payload)
       });
 
-      alert('Pesanan berhasil, Pesanan Anda Akan Kami proses Hari ini.');
+      alert('Pesanan berhasil, pesanan Anda akan kami proses hari ini.');
+
+      // reset form
       e.target.reset();
-      variantPrice = 0;
+      variantPrice  = 0;
       paymentMethod = null;
       paymentOptions.forEach(o => o.classList.remove('active'));
       qrisDetail.classList.add('hidden');
       bankDetail.classList.add('hidden');
       codDetail.classList.add('hidden');
       uploadSection.classList.add('hidden');
-      basePriceEl.textContent = 'Rp0';
+      basePriceEl.textContent  = 'Rp0';
       totalPriceEl.textContent = 'Rp0';
 
     } catch (err) {
@@ -516,6 +507,5 @@ document.getElementById('orderForm').addEventListener('submit', async (e) => {
     }
   });
 </script>
-
 </body>
 </html>
